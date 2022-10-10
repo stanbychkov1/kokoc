@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="single-card__header-info">
+        <h1 class="single-card__title">
+                {{ success }}
+        </h1>
+    </div>
+    {% if request.path == '/unsuccess/' %}
+        <a class="btn btn-dark" href="{{ request.META.HTTP_REFERER }}">Вернуться</a>
+    {% endif %}
+    <a class="btn btn-dark" href="{% url 'index' %}">Вернуться на главную</a>
+{% endblock %}

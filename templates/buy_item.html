@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="single-card__header-info">
+        <h1 class="single-card__title">
+            <form class="form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="custom-button-block">
+                <button class="button button_style_blue" type="submit" value="Confirm">Вы точно хотите купить это предложение?</button>
+            </div>
+            </form>
+        </h1>
+    </div>
+{% endblock %}
